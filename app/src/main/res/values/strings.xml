@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">JetPackLean</string>
+
+    <string name="app_img_describe">this is a image</string>
+    <string name="app_welcome_describe">Navigation Leaning is a App for lean how to user JetPack Androidx. if you want lean more about sneakers Let\'s begin</string>
+    <string name="app_welcome_button_login">Have a account ? Login</string>
+    <string name="app_welcome_button_register">Join us</string>
+
+</resources>
