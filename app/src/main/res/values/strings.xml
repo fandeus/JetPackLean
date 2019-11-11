@@ -6,4 +6,15 @@
     <string name="app_welcome_button_login">Have a account ? Login</string>
     <string name="app_welcome_button_register">Join us</string>
 
+    <string name="app_login_welcome">Welcome to JatPack</string>
+    <string name="app_login_name">Name</string>
+    <string name="app_login_password">password</string>
+    <string name="app_login_sing_in">sing in</string>
+
+    <string name="app_register_welcome">Welcome join us</string>
+    <string name="app_register_email">email</string>
+    <string name="app_register_account">user account</string>
+    <string name="app_register_password">password</string>
+    <string name="app_register_submit">submit</string>
+
 </resources>
