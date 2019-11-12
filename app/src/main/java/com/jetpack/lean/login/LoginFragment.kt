@@ -8,18 +8,32 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.jetpack.lean.R
+import com.jetpack.lean.databinding.FragmentLoginBinding
+import com.jetpack.lean.login.viewmodel.LoginModel
 
 class LoginFragment : Fragment() {
+
+    lateinit var loginModel: LoginModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_login, container, false)
+        val binding: FragmentLoginBinding =
+            DataBindingUtil.inflate(
+                inflater,
+                R.layout.fragment_login,
+                container,
+                false
+            )
+        loginModel = LoginModel("", "", context!!, this)
+        binding.model = loginModel
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
