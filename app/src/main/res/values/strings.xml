@@ -16,5 +16,9 @@
     <string name="app_register_account">user account</string>
     <string name="app_register_password">password</string>
     <string name="app_register_submit">submit</string>
+    
+    <string name="app_main_home">home</string>
+    <string name="app_main_market">market</string>
+    <string name="app_main_user">mine</string>
 
 </resources>
