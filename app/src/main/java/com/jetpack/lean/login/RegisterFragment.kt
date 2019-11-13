@@ -27,7 +27,7 @@ class RegisterFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        /*
         val back = view.findViewById<ImageView>(R.id.regiser_imageView)
         back.setOnClickListener {
             requireActivity().onBackPressed()
@@ -35,6 +35,7 @@ class RegisterFragment : Fragment() {
 
         val email = view.findViewById<EditText>(R.id.register_editTextTextEmailAddress)
         email.text = Editable.Factory.getInstance().newEditable(args.email)
+        */
     }
 
 }

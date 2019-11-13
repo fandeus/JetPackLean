@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:tools="http://schemas.android.com/tools"
+<layout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
         <!--需要的viewModel，通过mBing.vm= mViewModel注入-->
@@ -19,7 +20,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:contentDescription="@string/app_img_describe"
-            android:onClick="@{model.modelFragment.requireActivity().onBackPressed()}"
+            android:onClick="@{()->model._fragment.requireActivity().onBackPressed()}"
             android:padding="8dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -50,10 +51,10 @@
             android:ems="10"
             android:hint="@string/app_login_name"
             android:inputType="textPersonName"
-            android:onTextChanged="@{(text,start,before,count)->model.onNameChange()}"
+            android:onTextChanged="@{(text, start, before, count)->model.onNameChanged(text)}"
             android:paddingStart="4dp"
             android:paddingEnd="4dp"
-            android:text="@{model.userName}"
+            android:text="@{model.n.toString()}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/login_textView"
@@ -70,12 +71,12 @@
             android:drawableStart="@drawable/ic_lock"
             android:drawablePadding="4dp"
             android:ems="10"
-            android:hint="@string/app_login_name"
+            android:hint="@string/app_login_password"
             android:inputType="textPassword"
-            android:onTextChanged="@{model.onPassword()}"
+            android:onTextChanged="@{(text, start, before, count)->model.onPwdChange(text)}"
             android:paddingStart="4dp"
             android:paddingEnd="4dp"
-            android:text="@{model.password}"
+            android:text="@{model.p.toString()}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/login_editTextTextPersonName"
@@ -88,15 +89,14 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="32dp"
-            android:background="@drawable/shape_blue_radius_10"
-            android:onClick="@{()->model.login()}"
+            android:background="@drawable/selector_button"
+            android:enabled="@{!model.n.empty|| !model.p.empty}"
+            android:onClick="@{()->model.userLogin()}"
             android:text="@string/app_login_sing_in"
-            android:enabled="@{(model.password.get().isEmpty()||model.userName.get().isEmpty()) ? false : true}"
             android:textColor="@color/colorWhite"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/login_editTextTextPersonPassword" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

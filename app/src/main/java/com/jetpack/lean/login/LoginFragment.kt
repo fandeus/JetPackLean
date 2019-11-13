@@ -10,7 +10,6 @@ import android.widget.EditText
 import android.widget.ImageView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import com.jetpack.lean.R
 import com.jetpack.lean.databinding.FragmentLoginBinding
 import com.jetpack.lean.login.viewmodel.LoginModel
@@ -37,7 +36,7 @@ class LoginFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
+        /*
         //第一种方式
         val nameStr = arguments?.getString("name")
 
@@ -52,10 +51,13 @@ class LoginFragment : Fragment() {
         //设置一个可能为空的参数
         name.text = Editable.Factory.getInstance().newEditable(nameStr)
 
+
         val loginButton = view.findViewById<Button>(R.id.login_button)
+
         loginButton.setOnClickListener {
             findNavController().navigate(R.id.login_to_home)
         }
+        */
     }
 
 }
