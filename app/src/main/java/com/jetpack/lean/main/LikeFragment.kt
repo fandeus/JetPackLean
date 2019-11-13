@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.jetpack.lean.R
 
-class HomeFragment : Fragment() {
+class LikeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -20,6 +20,6 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         var info: TextView = view.findViewById(R.id.list_fragmnet_textView)
-        info.text = "主页"
+        info.text = "收藏"
     }
 }

@@ -24,7 +24,9 @@
 
         <action
             android:id="@+id/welcome_to_home"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/homeFragment"
+            app:popUpTo="@+id/welcomeFragment"
+            app:popUpToInclusive="true" />
 
     </fragment>
 
@@ -71,7 +73,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.jetpack.lean.main.HomeFragment"
+        android:name="com.jetpack.lean.main.MainFragment"
         android:label="@string/app_main_home"
         tools:layout="@layout/fragment_home" />
 
