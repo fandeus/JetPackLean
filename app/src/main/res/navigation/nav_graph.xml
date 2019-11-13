@@ -22,6 +22,10 @@
             app:popEnterAnim="@anim/common_slide_in_left"
             app:popExitAnim="@anim/common_slide_out_right" />
 
+        <action
+            android:id="@+id/welcome_to_home"
+            app:destination="@id/homeFragment" />
+
     </fragment>
 
     <fragment
@@ -67,7 +71,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.jetpack.lean.HomeFragment"
+        android:name="com.jetpack.lean.main.HomeFragment"
         android:label="@string/app_main_home"
         tools:layout="@layout/fragment_home" />
 

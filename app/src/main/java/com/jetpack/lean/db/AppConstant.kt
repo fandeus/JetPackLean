@@ -1,4 +1,4 @@
-package com.jetpack.lean
+package com.jetpack.lean.db
 
 /**
  * @author VenRen
@@ -11,4 +11,6 @@ package com.jetpack.lean
 object AppConstant {
     const val USER_NAME = "JetPack"
     const val PASSWORD = "123456"
+
+    const val USER_LOGIN = "user login key"
 }

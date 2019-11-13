@@ -1,13 +1,15 @@
 package com.jetpack.lean.login.viewmodel
 
 import android.content.Context
+import android.content.SharedPreferences
 import android.widget.Toast
 import androidx.databinding.ObservableField
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment.findNavController
-import com.jetpack.lean.AppConstant
+import com.jetpack.lean.db.AppConstant
 import com.jetpack.lean.R
 import com.jetpack.lean.login.LoginFragment
+import com.jetpack.lean.util.SharedPreferencesUtil
 
 /**
  * @author VenRen
@@ -44,6 +46,7 @@ class LoginModel constructor(name: String, pwd: String, context: Context, fragme
             p.get().equals(AppConstant.PASSWORD)
         ) {
             Toast.makeText(_context, "密码正确", Toast.LENGTH_SHORT).show()
+            SharedPreferencesUtil.setData(AppConstant.USER_LOGIN, true)
             findNavController(_fragment).navigate(R.id.login_to_home)
         } else {
             Toast.makeText(_context, "密码错误", Toast.LENGTH_SHORT).show()
