@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.switchMap
-import java.util.logging.Level.ALL
+import com.jetpack.lean.db.data.Shoe
 
 class ShoeModel constructor(shoeRepository: ShoeRepository) : ViewModel() {
 
@@ -14,12 +14,14 @@ class ShoeModel constructor(shoeRepository: ShoeRepository) : ViewModel() {
         value = ALL
     }
 
-    /*val shoes: LiveData<List<Shoe>> = brand.switchMap {
+    val shoes : LiveData<List<Shoe>> = brand.switchMap {
         //Room 数据库查询，只要知道返回是LiveData<List<Shoe>> 即可
         if (it == ALL) {
             shoeRepository.getAllShoe()
+        }else{
+            shoeRepository.getShoesByBrand(it)
         }
-    }*/
+    }
 
     companion object {
         const val ALL = "所有"
