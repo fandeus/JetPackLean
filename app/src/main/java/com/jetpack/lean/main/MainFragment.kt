@@ -76,5 +76,4 @@ class MainFragment : Fragment() {
         }
         currentFragment = targetFragment
     }
-
 }
