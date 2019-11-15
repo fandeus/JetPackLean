@@ -24,9 +24,7 @@
 
         <action
             android:id="@+id/welcome_to_home"
-            app:destination="@id/homeFragment"
-            app:popUpTo="@+id/welcomeFragment"
-            app:popUpToInclusive="true" />
+            app:destination="@id/homeFragment" />
 
     </fragment>
 
